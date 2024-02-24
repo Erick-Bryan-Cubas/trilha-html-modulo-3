@@ -1,0 +1,81 @@
+body {
+    font-family: 'Georgia', serif; /* Mudança para uma fonte com serifa para um visual mais clássico */
+    color: #333;
+    background-color: #eaeaea; /* Cor de fundo mais suave */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Aumento da altura da linha para melhorar a legibilidade */
+}
+
+header, nav, footer {
+    background-color: #202020; /* Cor mais profunda para contraste */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0; /* Aumento do padding para mais espaço */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove margin default */
+}
+
+nav ul li {
+    display: inline-block; /* Mudança para inline-block para melhor alinhamento */
+    margin: 0 20px; /* Aumento da margem para melhor separação */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold; /* Torna o texto mais legível */
+    transition: color 0.3s; /* Suaviza a transição de cores */
+}
+
+nav ul li a:hover {
+    color: #f4d03f; /* Cor de destaque ao passar o mouse */
+}
+
+main {
+    padding: 40px 20px; /* Aumento do padding para mais espaço ao redor do texto */
+    max-width: 960px; /* Largura máxima aumentada para melhor aproveitamento em telas maiores */
+    margin: 40px auto; /* Aumento da margem superior e inferior */
+    background-color: #fff; /* Fundo branco para o conteúdo principal para melhorar o contraste */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra sutil para destacar o conteúdo */
+}
+
+article h1, h2 {
+    color: #34568B; /* Cor mais vibrante para títulos */
+}
+
+article img {
+    border-radius: 5px; /* Borda arredondada para as imagens */
+    margin-top: 20px; /* Espaço acima da imagem */
+}
+
+p {
+    text-align: justify; /* Alinhamento justificado para parágrafos */
+    margin-bottom: 20px; /* Espaço abaixo dos parágrafos */
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 1em; /* Aumento do tamanho da fonte */
+    background-color: #181818; /* Cor de fundo mais escura para o rodapé */
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px auto; /* Centraliza os itens da navegação no modo responsivo */
+    }
+
+    main {
+        padding: 20px; /* Padding reduzido em dispositivos menores */
+    }
+
+    article h1 {
+        font-size: 1.5em; /* Tamanho de fonte ajustado para títulos em dispositivos menores */
+    }
+}

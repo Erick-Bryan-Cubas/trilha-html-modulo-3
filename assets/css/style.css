@@ -1,38 +1,97 @@
+/* style.css para a página index com menu mais moderno */
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Suave cor de fundo */
+    color: #333; /* Cor do texto mais legível */
 }
-ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0; /* Removendo espaçamento padrão */
+}
+
+a {
+    color: #007bff; /* Cor de link mais vibrante */
+    text-decoration: none;
+    transition: color 0.3s; /* Transição suave de cores */
+}
+
+a:hover {
+    color: #0056b3; /* Cor de hover para links */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+.logo img {
+    border-radius: 80%;
+    /* Centraliza a imagem */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .bar {
-    background-color: #f9f9fb;
-    padding:15px;
+    background-color: #ffffff; /* Cor de fundo para a barra, mais limpa */
+    padding: 15px;
     border-top: solid 1px #cdcdcd;
     border-bottom: solid 1px #cdcdcd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil para profundidade */
 }
+
 .content {
     max-width: 1440px;
-    margin: auto;
-    grid-gap: 3rem;
+    margin: 20px auto; /* Ajuste para centralizar e dar espaço acima e abaixo */
     display: grid;
-    gap: 3rem;
-    grid-template-areas: "sidebar main anchors";
-    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    grid-gap: 20px; /* Aumento do espaço entre os elementos */
+    grid-template-areas: 
+        "sidebar main anchors";
+    grid-template-columns: 200px 1fr 200px; /* Ajuste de tamanhos para responsividade e alinhamento */
+    padding: 20px; /* Espaçamento interno para não tocar nas bordas */
 }
+
 .footer {
     min-height: 100px;
     border-top: solid 1px #cdcdcd;
+    background-color: #ffffff; /* Cor de fundo para o rodapé */
+    text-align: center; /* Centraliza o conteúdo do rodapé */
+    padding: 20px 0; /* Espaçamento superior e inferior */
+    font-size: 0.9rem; /* Tamanho de fonte menor para o rodapé */
+    color: #666; /* Cor de texto mais suave para o rodapé */
 }
-.anchors {
-    border-left: solid 1px #cdcdcd;
-    padding-left: 15px;
+
+.anchors, .sidebar {
+    padding: 20px; /* Espaçamento interno para texto */
+    background-color: #202020; /* Fundo escuro para separar visualmente */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil */
+    border-radius: 10px; /* Borda arredondada para um visual mais moderno */
 }
+
 .sidebar {
-    border-right: solid 1px #cdcdcd;
+    border-right: none; /* Remover a borda direita para um design mais limpo */
 }
+
+.anchors {
+    border-left: none; /* Remover a borda esquerda para consistência */
+}
+
 figure {
-    text-align: center;
+    margin: 20px 0; /* Espaçamento acima e abaixo para não colar em outros elementos */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .content {
+        grid-template-areas: 
+            "sidebar"
+            "main"
+            "anchors";
+        grid-template-columns: 1fr; /* Colunas em pilha para visões menores */
+    }
+
+    .sidebar, .anchors {
+        padding: 15px;
+    }
+    
+
 }
